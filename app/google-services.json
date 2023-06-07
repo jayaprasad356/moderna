@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "523345772502",
+    "project_id": "moderna-12645",
+    "storage_bucket": "moderna-12645.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:523345772502:android:eb9f4b8af2a11f76d62e77",
+        "android_client_info": {
+          "package_name": "com.gm.moderna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "523345772502-q2t07lrnmgq7rpkdq5f74ermcjkck4qi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_wuSkCI5VOgJRLMgrXrIuXjrMS9SeG4I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "523345772502-q2t07lrnmgq7rpkdq5f74ermcjkck4qi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
