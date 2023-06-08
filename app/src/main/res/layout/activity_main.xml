@@ -24,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/bottomNavigationView"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        app:backgroundTint="@color/white"
+        android:background="@color/black"
+        app:backgroundTint="@color/colorPrimary"
         app:elevation="0dp"
         app:itemTextAppearanceActive="@style/BottomNavigation.ActiveItemTextAppearance"
         app:menu="@menu/navigation" />

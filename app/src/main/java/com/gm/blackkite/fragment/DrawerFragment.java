@@ -108,8 +108,8 @@ public class DrawerFragment extends Fragment {
                     .load("-")
                     .fit()
                     .centerInside()
-                    .placeholder(R.drawable.jaswiklogo)
-                    .error(R.drawable.jaswiklogo)
+                    .placeholder(R.drawable.logo_modena)
+                    .error(R.drawable.logo_modena)
                     .transform(new RoundedCornersTransformation(20, 0))
                     .into(imgProfile);
 

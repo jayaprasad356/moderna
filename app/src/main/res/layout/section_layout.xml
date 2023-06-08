@@ -45,7 +45,7 @@
             android:textSize="@dimen/_12ssp"
             android:text="@string/view_all"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textColor="@color/colorSecondary"
+            android:textColor="@color/black"
             android:textStyle="bold" />
     </RelativeLayout>
 

@@ -24,6 +24,6 @@
         android:contentDescription="@string/app_name"
         android:minWidth="@dimen/_220sdp"
         android:minHeight="@dimen/_220sdp"
-        android:src="@drawable/jaswiklogo" />
+        android:src="@drawable/logo_modena" />
 
 </RelativeLayout>

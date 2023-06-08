@@ -1,9 +1,9 @@
 <resources>
-    <color name="colorPrimary">@color/black</color>
-    <color name="colorSecondary">#FF9900</color>
-    <color name="colorPrimaryDark">#10161d</color>
+    <color name="colorPrimary">#FF0033</color>
+    <color name="colorSecondary">@color/white</color>
+    <color name="colorPrimaryDark">#FF0033</color>
     <color name="colorAccent">#222E3E</color>
-    <color name="colorPrimaryLight">@color/black</color>
+    <color name="colorPrimaryLight">#FF0033</color>
     <color name="text_unselected">#A3AABF</color>
     <color name="bg_color">#F8F8F8</color>
     <color name="black">#000000</color>

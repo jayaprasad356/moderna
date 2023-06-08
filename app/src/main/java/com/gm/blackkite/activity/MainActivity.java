@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 },
                 new int[]{
                         Color.parseColor(getResources().getString(R.color.text_unselected)),
-                        Color.parseColor(getResources().getString(R.color.black))
+                        Color.parseColor(getResources().getString(R.color.white))
                 });
 
         bottomNavigationView.setItemIconTintList(iconColorStates);

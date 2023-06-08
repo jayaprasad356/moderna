@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Jaswik</string>
+    <string name="app_name">Moderna</string>
     <!--  *************************************************************************************************************  -->
     <!--     For privacy policy and terms and condition whatever you set words in privacy_policy and terms_conditions that words must be contain in msg_privacy_terms.Other wise app will crash -->
     <string name="privacy_policy">Privacy Policy</string>

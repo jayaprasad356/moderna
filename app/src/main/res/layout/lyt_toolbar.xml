@@ -47,7 +47,7 @@
                     android:layout_height="@dimen/_26sdp"
                     android:layout_alignParentStart="true"
                     android:contentDescription="@string/app_name"
-                    app:srcCompat="@drawable/jaswiklogo" />
+                    app:srcCompat="@drawable/logo_modena" />
 
             </RelativeLayout>
 

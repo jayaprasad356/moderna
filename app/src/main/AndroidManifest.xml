@@ -50,7 +50,7 @@
         android:name="com.gm.blackkite.helper.ApiConfig"
         android:allowBackup="false"
         android:fullBackupContent="@xml/backup_descriptor"
-        android:icon="@drawable/jaswiklogo"
+        android:icon="@drawable/logo_modena"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
         android:supportsRtl="true"

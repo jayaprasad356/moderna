@@ -25,7 +25,7 @@
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/app_name"
         android:layout_marginBottom="@dimen/_30sdp"
-        android:src="@drawable/jaswiklogo" />
+        android:src="@drawable/logo_modena" />
 
     <!--Login lyt-->
     <ScrollView
