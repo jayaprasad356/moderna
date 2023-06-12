@@ -60,7 +60,7 @@
                     android:layout_height="12dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/_10sdp"
                     android:contentDescription="@string/app_name"
                     android:visibility="visible" />
 
@@ -76,7 +76,7 @@
                     android:id="@+id/tvHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dimen_5dp"
+                    android:layout_marginStart="@dimen/_5sdp"
                     android:layout_toStartOf="@+id/lytImgFav">
 
                     <TextView

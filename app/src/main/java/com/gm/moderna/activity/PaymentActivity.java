@@ -640,7 +640,7 @@ public class PaymentActivity extends AppCompatActivity  implements PaytmPaymentT
                     sendParams.put(Constant.MOBILE, session.getData(Constant.MOBILE));
                     sendParams.put(Constant.USER_NAME, session.getData(Constant.NAME));
                     sendParams.put(Constant.EMAIL, session.getData(Constant.EMAIL));
-                    new PaymentModelClass(activity).OnPayClick(activity, sendParams, Constant.PAYMENT, sendParams.get(Constant.FINAL_TOTAL));
+                    //new PaymentModelClass(activity).OnPayClick(activity, sendParams, Constant.PAYMENT, sendParams.get(Constant.FINAL_TOTAL));
                 } else if (paymentMethod.equals(getString(R.string.paypal))) {
                     dialog.dismiss();
                     sendParams.put(Constant.FROM, Constant.PAYMENT);
@@ -1141,7 +1141,7 @@ public class PaymentActivity extends AppCompatActivity  implements PaytmPaymentT
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode != RaveConstants.RAVE_REQUEST_CODE && data != null) {
-            new PaymentModelClass(activity).TransactionMethod(data, activity, Constant.PAYMENT);
+            //new PaymentModelClass(activity).TransactionMethod(data, activity, Constant.PAYMENT);
         } else if (requestCode == RaveConstants.RAVE_REQUEST_CODE && data != null && data.getStringExtra("response") != null) {
             try {
                 JSONObject details = new JSONObject(data.getStringExtra("response"));

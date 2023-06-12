@@ -65,7 +65,7 @@
                 <LinearLayout
                     android:id="@+id/lytSearchView"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/dimen_50dp"
+                    android:layout_height="@dimen/_50sdp"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginEnd="@dimen/_10sdp"
@@ -91,17 +91,17 @@
                     android:id="@+id/offerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dimen_5dp"
-                    android:layout_marginEnd="@dimen/dimen_5dp"
-                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:background="@color/bg_color" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dimen_5dp"
-                    android:layout_marginEnd="@dimen/dimen_5dp"
-                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:orientation="vertical">
 
                     <androidx.viewpager.widget.ViewPager
@@ -125,7 +125,7 @@
                     android:id="@+id/lytSeller"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:orientation="vertical">
 
                     <TextView
@@ -160,8 +160,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/tvTitleSeller"
-                        android:layout_marginStart="@dimen/dimen_5dp"
-                        android:layout_marginEnd="@dimen/dimen_5dp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
                         android:background="@color/bg_color" />
                 </RelativeLayout>
 
@@ -169,7 +169,7 @@
                     android:id="@+id/lytCategory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_5dp">
+                    android:layout_marginBottom="@dimen/_5sdp">
 
                     <TextView
                         android:id="@+id/tvTitleCategory"
@@ -202,8 +202,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/tvTitleCategory"
-                        android:layout_marginStart="@dimen/dimen_5dp"
-                        android:layout_marginEnd="@dimen/dimen_5dp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
                         android:background="@color/bg_color" />
 
                 </RelativeLayout>
@@ -212,7 +212,7 @@
                     android:id="@+id/sectionView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="@dimen/dimen_5dp"
+                    android:layout_marginBottom="@dimen/_5sdp"
                     android:background="@color/bg_color"
                     android:visibility="visible" />
 

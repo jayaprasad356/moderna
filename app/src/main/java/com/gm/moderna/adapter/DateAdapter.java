@@ -56,7 +56,7 @@ public class DateAdapter extends RecyclerView.Adapter<DateAdapter.VideoHolder> {
             holder.relativeLyt.setBackgroundResource(R.drawable.date_shadow);
         }
 
-        holder.relativeLyt.setPadding((int) activity.getResources().getDimension(R.dimen.dimen_15dp), (int) activity.getResources().getDimension(R.dimen.dimen_15dp), (int) activity.getResources().getDimension(R.dimen.dimen_15dp), (int) activity.getResources().getDimension(R.dimen.dimen_15dp));
+        holder.relativeLyt.setPadding((int) activity.getResources().getDimension(R.dimen._15sdp), (int) activity.getResources().getDimension(R.dimen._15sdp), (int) activity.getResources().getDimension(R.dimen._15sdp), (int) activity.getResources().getDimension(R.dimen._15sdp));
 
 
         holder.tvDay.setText(ApiConfig.getDayOfWeek(Integer.parseInt(bookingDate.getDay()), activity));

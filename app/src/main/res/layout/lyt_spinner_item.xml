@@ -2,8 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="@dimen/dimen_2dp"
-    android:paddingBottom="@dimen/dimen_2dp">
+    android:paddingTop="@dimen/_2sdp"
+    android:paddingBottom="@dimen/_2sdp">
 
     <TextView
         android:id="@+id/tvMeasurement"
@@ -23,7 +23,7 @@
     <!--        android:layout_height="wrap_content"-->
     <!--        android:layout_alignParentEnd="true"-->
     <!--        android:layout_centerVertical="true"-->
-    <!--        android:layout_marginEnd="@dimen/dimen_15dp"-->
+    <!--        android:layout_marginEnd="@dimen/_15sdp"-->
     <!--        android:gravity="end"-->
     <!--        android:textColor="@color/txt_color"-->
     <!--        android:textSize="@dimen/_12ssp"-->

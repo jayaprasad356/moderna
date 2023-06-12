@@ -500,7 +500,7 @@ public class WalletTransactionFragment extends Fragment implements PaytmPaymentT
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode != RaveConstants.RAVE_REQUEST_CODE && data != null) {
-            new PaymentModelClass(getActivity()).TransactionMethod(data, activity, Constant.WALLET);
+            //new PaymentModelClass(getActivity()).TransactionMethod(data, activity, Constant.WALLET);
         } else if (requestCode == RaveConstants.RAVE_REQUEST_CODE && data != null) {
             try {
                 JSONObject details = new JSONObject(data.getStringExtra("response"));
@@ -528,7 +528,7 @@ public class WalletTransactionFragment extends Fragment implements PaytmPaymentT
             sendParams.put(Constant.MOBILE, session.getData(Constant.MOBILE));
             sendParams.put(Constant.USER_NAME, session.getData(Constant.NAME));
             sendParams.put(Constant.EMAIL, session.getData(Constant.EMAIL));
-            new PaymentModelClass(getActivity()).OnPayClick(activity, sendParams, Constant.WALLET, amount);
+            //new PaymentModelClass(getActivity()).OnPayClick(activity, sendParams, Constant.WALLET, amount);
         } else if (paymentMethod.equals(getString(R.string.paypal))) {
             sendParams.put(Constant.FINAL_TOTAL, amount);
             sendParams.put(Constant.FIRST_NAME, session.getData(Constant.NAME));

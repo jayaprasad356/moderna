@@ -20,7 +20,7 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_60dp"
+            android:layout_marginTop="@dimen/_60sdp"
             android:text="@string/discover"
             android:textAlignment="center"
             android:textColor="@color/txt_color"

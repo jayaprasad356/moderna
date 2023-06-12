@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="3dp"
-    android:elevation="@dimen/dimen_50dp"
+    android:elevation="@dimen/_50sdp"
     android:orientation="vertical"
     android:visibility="visible">
 

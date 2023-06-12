@@ -41,13 +41,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="@dimen/dimen_30dp">
+            android:padding="@dimen/_30sdp">
 
             <TextView
                 android:id="@+id/tvWelcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:layout_marginBottom="@dimen/_20sdp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
@@ -63,11 +63,11 @@
                     android:layout_height="wrap_content"
                     android:background="@color/transparent"
                     android:drawableStart="@drawable/ic_phone"
-                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:drawablePadding="@dimen/_10sdp"
                     android:hint="@string/mobile"
                     android:importantForAutofill="yes"
                     android:inputType="phone|number"
-                    android:padding="@dimen/dimen_7dp"
+                    android:padding="@dimen/_7sdp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -88,11 +88,11 @@
                     android:layout_height="wrap_content"
                     android:background="@color/transparent"
                     android:drawableStart="@drawable/ic_pass"
-                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:drawablePadding="@dimen/_10sdp"
                     android:hint="@string/password"
                     android:importantForAutofill="yes"
                     android:inputType="textPassword"
-                    android:padding="@dimen/dimen_7dp"
+                    android:padding="@dimen/_7sdp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -106,7 +106,7 @@
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:background="@drawable/card_shadow"
                 android:backgroundTint="@color/colorPrimary"
                 android:onClick="OnBtnClick"
@@ -122,7 +122,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:onClick="OnBtnClick"
                 android:padding="5dp"
                 android:text="@string/forgot_text"
@@ -132,7 +132,7 @@
                 android:id="@+id/tvSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_25dp"
+                android:layout_marginTop="@dimen/_25sdp"
                 android:background="@drawable/card_shadow"
                 android:backgroundTint="@color/bg_gray"
                 android:onClick="OnBtnClick"
@@ -163,7 +163,7 @@
             android:background="@drawable/login_curve"
             android:backgroundTint="@color/white"
             android:orientation="vertical"
-            android:padding="@dimen/dimen_40dp">
+            android:padding="@dimen/_40sdp">
 
             <ImageView
                 android:id="@+id/imgVerifyClose"
@@ -181,7 +181,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:text="@string/verify_your_mobile"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/black" />
@@ -189,8 +189,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_25dp"
-                android:layout_marginBottom="@dimen/dimen_7dp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
                 android:background="@color/transparent"
                 android:orientation="horizontal"
                 android:weightSum="15">
@@ -282,7 +282,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
-                        android:layout_margin="@dimen/dimen_7dp"
+                        android:layout_margin="@dimen/_7sdp"
                         android:layout_toEndOf="@id/img"
                         android:text="@string/resend"
                         android:textColor="@color/gray"
@@ -294,7 +294,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:paddingEnd="@dimen/dimen_10dp"
+                        android:paddingEnd="@dimen/_10sdp"
                         android:textAlignment="textEnd"
                         android:textColor="@color/gray"
                         android:textStyle="bold" />
@@ -305,7 +305,7 @@
                 android:id="@+id/btnVerify"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:background="@drawable/card_shadow"
                 android:backgroundTint="@color/colorPrimary"
                 android:onClick="OnBtnClick"
@@ -335,7 +335,7 @@
             android:background="@drawable/login_curve"
             android:backgroundTint="@color/white"
             android:orientation="vertical"
-            android:padding="@dimen/dimen_40dp">
+            android:padding="@dimen/_40sdp">
 
             <ImageView
                 android:id="@+id/imgResetPasswordClose"
@@ -352,7 +352,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="@dimen/dimen_20dp"
+                android:layout_marginBottom="@dimen/_20sdp"
                 android:text="@string/reset_pass_text"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textColor="@color/black"
@@ -369,11 +369,11 @@
                     android:layout_height="wrap_content"
                     android:background="@color/transparent"
                     android:drawableStart="@drawable/ic_pass"
-                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:drawablePadding="@dimen/_10sdp"
                     android:hint="@string/new_pass"
                     android:importantForAutofill="yes"
                     android:inputType="textPassword"
-                    android:padding="@dimen/dimen_7dp"
+                    android:padding="@dimen/_7sdp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -394,11 +394,11 @@
                     android:layout_height="wrap_content"
                     android:background="@color/transparent"
                     android:drawableStart="@drawable/ic_pass"
-                    android:drawablePadding="@dimen/dimen_10dp"
+                    android:drawablePadding="@dimen/_10sdp"
                     android:hint="@string/confirm_new_pass"
                     android:importantForAutofill="yes"
                     android:inputType="textPassword"
-                    android:padding="@dimen/dimen_7dp"
+                    android:padding="@dimen/_7sdp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -412,7 +412,7 @@
                 android:id="@+id/btnResetPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:background="@drawable/card_shadow"
                 android:backgroundTint="@color/colorPrimary"
                 android:onClick="OnBtnClick"
@@ -447,7 +447,7 @@
                 android:background="@drawable/login_curve"
                 android:backgroundTint="@color/white"
                 android:orientation="vertical"
-                android:padding="@dimen/dimen_40dp">
+                android:padding="@dimen/_40sdp">
 
                 <ImageView
                     android:id="@+id/imgSignUpClose"
@@ -490,7 +490,7 @@
                         android:layout_height="match_parent"
                         android:background="@color/transparent"
                         android:drawableStart="@drawable/ic_user"
-                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/name"
                         android:importantForAutofill="no"
                         android:inputType="textPersonName"
@@ -518,7 +518,7 @@
                         android:layout_height="match_parent"
                         android:background="@color/transparent"
                         android:drawableStart="@drawable/ic_mail"
-                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/email"
                         android:importantForAutofill="no"
                         android:inputType="textEmailAddress"
@@ -545,7 +545,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/transparent"
-                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/password"
                         android:importantForAutofill="no"
                         android:inputType="textPassword"
@@ -572,7 +572,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/transparent"
-                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:drawablePadding="@dimen/_10sdp"
                         android:hint="@string/confirm_pass"
                         android:importantForAutofill="no"
                         android:inputType="textPassword"
@@ -600,7 +600,7 @@
                         android:layout_height="match_parent"
                         android:background="@color/transparent"
                         android:drawableStart="@drawable/ic_refer_code"
-                        android:drawablePadding="@dimen/dimen_10dp"
+                        android:drawablePadding="@dimen/_10sdp"
                         android:importantForAutofill="no"
                         android:inputType="textCapCharacters"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
@@ -617,7 +617,7 @@
                     android:id="@+id/lytPrivacy"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/_20sdp"
                     android:orientation="horizontal">
 
                     <CheckBox
@@ -643,7 +643,7 @@
                     android:id="@+id/btnRegister"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_marginTop="@dimen/_20sdp"
                     android:background="@drawable/card_shadow"
                     android:backgroundTint="@color/colorPrimary"
                     android:onClick="OnBtnClick"

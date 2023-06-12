@@ -377,7 +377,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@drawable/card_shadow"
-        android:padding="@dimen/dimen_10dp"
+        android:padding="@dimen/_10sdp"
         android:visibility="visible">
 
         <TextView
@@ -408,7 +408,7 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:background="@drawable/confirm_bg"
             android:gravity="center"
-            android:padding="@dimen/dimen_12dp"
+            android:padding="@dimen/_12sdp"
             android:text="@string/proceed"
             android:textAllCaps="true"
             android:textColor="@color/white"

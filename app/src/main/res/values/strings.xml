@@ -418,4 +418,8 @@
     <string name="got_to_settings">Go to settings</string>
     <string name="go_to_category">Go to category</string>
     <string name="go_to_product">Go to product</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_continue">Continue</string>
+    <string name="password">Password</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
 </resources>

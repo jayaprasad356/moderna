@@ -7,7 +7,7 @@
     app:cardBackgroundColor="@color/bg_color">
 
     <RelativeLayout
-        android:padding="@dimen/dimen_20dp"
+        android:padding="@dimen/_20sdp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -43,7 +43,7 @@
     <LinearLayout
         android:id="@+id/lytSearchView"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_50dp"
+        android:layout_height="@dimen/_50sdp"
         android:layout_below="@id/tvMessage"
         android:orientation="horizontal"
         android:weightSum="30">

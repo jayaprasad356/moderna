@@ -13,7 +13,7 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/dimen_60dp"
+        android:layout_marginBottom="@dimen/_60sdp"
         android:visibility="visible">
 
         <LinearLayout
@@ -331,7 +331,7 @@
                 android:id="@+id/chIsDefault"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_15dp"
+                android:layout_marginTop="@dimen/_15sdp"
                 android:text="@string/set_as_default_address" />
 
 

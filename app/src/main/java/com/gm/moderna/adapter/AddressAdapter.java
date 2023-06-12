@@ -92,7 +92,7 @@ public class AddressAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             holder.tvDefaultAddress.setVisibility(View.VISIBLE);
         }
 
-        holder.lytMain.setPadding((int) activity.getResources().getDimension(R.dimen.dimen_15dp), (int) activity.getResources().getDimension(R.dimen.dimen_15dp), (int) activity.getResources().getDimension(R.dimen.dimen_15dp), (int) activity.getResources().getDimension(R.dimen.dimen_15dp));
+        holder.lytMain.setPadding((int) activity.getResources().getDimension(R.dimen._15sdp), (int) activity.getResources().getDimension(R.dimen._15sdp), (int) activity.getResources().getDimension(R.dimen._15sdp), (int) activity.getResources().getDimension(R.dimen._15sdp));
         holder.tvName.setText(address.getName());
         if (!address.getType().equalsIgnoreCase("")) {
             holder.tvAddressType.setText(address.getType());

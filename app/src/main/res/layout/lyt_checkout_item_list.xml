@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/card_shadow"
-    android:padding="@dimen/dimen_10dp">
+    android:padding="@dimen/_10sdp">
 
     <TextView
         android:id="@+id/tvDeliverable"
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvDeliverable"
-        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:textStyle="bold" />
 
     <TextView
@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvItemName"
-        android:layout_marginStart="@dimen/dimen_10dp"
+        android:layout_marginStart="@dimen/_10sdp"
         android:layout_toEndOf="@id/tvQty"
         android:textAlignment="viewStart" />
 
@@ -59,7 +59,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvPrice"
-        android:layout_marginEnd="@dimen/dimen_10dp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:layout_toEndOf="@id/tvTaxTitle" />
 
 

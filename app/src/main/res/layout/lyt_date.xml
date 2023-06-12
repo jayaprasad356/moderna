@@ -19,7 +19,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/dimen_15dp">
+        android:padding="@dimen/_15sdp">
 
         <TextView
             android:id="@+id/tvDay"

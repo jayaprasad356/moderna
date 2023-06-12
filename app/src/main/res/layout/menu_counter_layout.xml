@@ -13,12 +13,12 @@
 
         <TextView
             android:id="@+id/counter"
-            android:layout_width="@dimen/dimen_20sp"
-            android:layout_height="@dimen/dimen_20sp"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
             android:background="@drawable/card_shadow_drawer_notification"
             android:gravity="center"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/dimen_12dp"
+            android:textSize="@dimen/_12sdp"
             android:textStyle="bold"
             android:visibility="gone" />
     </LinearLayout>

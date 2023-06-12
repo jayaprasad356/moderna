@@ -3,7 +3,7 @@
     android:id="@+id/_lytMain"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="@dimen/dimen_1dp"
+    android:layout_margin="@dimen/_1sdp"
     android:background="@drawable/card_shadow"
     android:orientation="horizontal"
     android:padding="@dimen/_15sdp">
@@ -42,8 +42,8 @@
                 android:layout_toEndOf="@id/_tvName"
                 android:background="@drawable/right_btn_bg"
                 android:backgroundTint="@color/background"
-                android:paddingStart="@dimen/dimen_10dp"
-                android:paddingEnd="@dimen/dimen_10dp" />
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp" />
 
             <View
                 android:id="@+id/_tvDefaultAddress"
@@ -54,14 +54,14 @@
                 android:layout_toEndOf="@id/_tvAddressType"
                 android:background="@drawable/right_btn_bg"
                 android:backgroundTint="@color/background"
-                android:paddingStart="@dimen/dimen_10dp"
-                android:paddingEnd="@dimen/dimen_10dp" />
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp" />
 
             <View
                 android:id="@+id/_imgEdit"
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
-                android:layout_marginEnd="@dimen/dimen_5dp"
+                android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_toStartOf="@id/_imgDelete"
                 android:background="@drawable/ic_edit"
                 android:backgroundTint="@color/background" />
@@ -79,7 +79,7 @@
             android:id="@+id/_tvAddress"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/dimen_7dp"
+            android:layout_marginTop="@dimen/_7sdp"
             android:background="@color/background" />
 
         <View
@@ -87,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_15sdp"
             android:layout_gravity="center_vertical"
-            android:layout_marginTop="@dimen/dimen_7dp"
+            android:layout_marginTop="@dimen/_7sdp"
             android:background="@color/background" />
 
     </LinearLayout>

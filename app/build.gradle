@@ -78,10 +78,13 @@ dependencies {
     }
 
     //Payumoney
-    implementation 'com.payumoney.sdkui:plug-n-play:1.6.1'
+    implementation 'in.payu:payu-checkout-pro:2.0.3'
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
 
     //Razorpay
-    implementation 'com.razorpay:checkout:1.6.12'
+    implementation 'com.razorpay:checkout:1.6.31'
 
     //PayStack
     implementation 'co.paystack.android:paystack:3.1.3'

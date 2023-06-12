@@ -83,10 +83,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/image_view"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:text="@string/no_notification_found"
             android:textColor="@color/gray"
-            android:textSize="@dimen/dimen_20dp"
+            android:textSize="@dimen/_20sdp"
             android:textStyle="bold" />
 
         <TextView
@@ -95,10 +95,10 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/alertTitle"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dimen_15dp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:text="@string/you_have_no_notification_items_yet"
             android:textColor="@color/gray"
-            android:textSize="@dimen/dimen_15dp"
+            android:textSize="@dimen/_15sdp"
             android:textStyle="bold" />
     </RelativeLayout>
 

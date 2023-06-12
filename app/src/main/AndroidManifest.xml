@@ -56,7 +56,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:replace="android:usesCleartextTraffic">
+        tools:replace="android:usesCleartextTraffic,android:theme,android:allowBackup">
         <activity
             android:name="com.gm.moderna.activity.PaymentActivity"
             android:exported="true" />
@@ -69,7 +69,8 @@
             android:name="com.gm.moderna.activity.SplashActivity"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
+            tools:ignore="LockedOrientationActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

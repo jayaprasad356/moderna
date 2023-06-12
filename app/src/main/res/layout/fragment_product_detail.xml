@@ -27,7 +27,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvStatus"
-        android:layout_marginBottom="@dimen/dimen_50dp"
+        android:layout_marginBottom="@dimen/_50sdp"
         android:scrollbars="none"
         android:visibility="visible">
 
@@ -39,7 +39,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_10dp">
+                android:layout_marginTop="@dimen/_10sdp">
 
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/viewPager"
@@ -89,7 +89,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/dimen_5dp"
+                android:layout_margin="@dimen/_5sdp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -282,7 +282,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/viewPrice"
-                        android:layout_marginTop="@dimen/dimen_5dp"
+                        android:layout_marginTop="@dimen/_5sdp"
                         android:orientation="horizontal"
                         android:weightSum="2">
 
@@ -585,8 +585,8 @@
                 android:id="@+id/relativeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_5dp"
-                android:padding="@dimen/dimen_5dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
                 android:visibility="visible">
 
                 <View
@@ -600,7 +600,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/viewSimilar"
-                    android:layout_marginTop="@dimen/dimen_10dp">
+                    android:layout_marginTop="@dimen/_10sdp">
 
                     <TextView
                         android:id="@+id/title"
@@ -637,7 +637,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/titleLyt1"
-                    android:layout_marginTop="@dimen/dimen_5dp"
+                    android:layout_marginTop="@dimen/_5sdp"
                     android:nestedScrollingEnabled="false" />
             </RelativeLayout>
         </LinearLayout>
@@ -668,13 +668,13 @@
     <Button
         android:id="@+id/btnCart"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dimen_50dp"
+        android:layout_height="@dimen/_50sdp"
         android:layout_alignParentBottom="true"
         android:background="@color/colorPrimary"
         android:text="@string/go_to_cart"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="@dimen/dimen_18dp"
+        android:textSize="@dimen/_18sdp"
         android:textStyle="bold" />
 
 </RelativeLayout>

@@ -28,7 +28,7 @@
             android:layout_alignParentEnd="true"
             android:padding="5dp"
             android:visibility="gone"
-            app:srcCompat="@drawable/close"
+            app:srcCompat="@drawable/ic_close"
             android:contentDescription="@string/app_name" />
     </RelativeLayout>
 
