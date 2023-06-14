@@ -115,6 +115,28 @@
                 app:drawableEndCompat="@drawable/ic_right_arrow"
                 app:drawableStartCompat="@drawable/ic_home_outlined"
                 app:drawableTint="@color/drawer_icon_color" />
+            <TextView
+                android:id="@+id/tvMenuMyEarnings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/text_view_ripple"
+                android:clickable="true"
+                android:drawablePadding="@dimen/_15sdp"
+                android:focusable="true"
+                android:fontFamily="@font/open_sans"
+                android:minHeight="48dp"
+                android:paddingStart="@dimen/_15sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_7sdp"
+                android:text="@string/my_earnings"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                app:drawableEndCompat="@drawable/ic_right_arrow"
+                app:drawableStartCompat="@drawable/ic_baseline_card_giftcard_24"
+                app:drawableTint="@color/drawer_icon_color" />
 
             <TextView
                 android:id="@+id/tvMenuCart"

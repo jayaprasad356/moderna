@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MyEarningsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:background="@color/colorPrimary"
+        >
+
+        <ImageView
+            android:layout_marginRight="@dimen/_10sdp"
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_14sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/ic_arrow_back"
+            />
+
+        <TextView
+            android:layout_toRightOf="@+id/ivBack"
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_earnings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/tvWithdrawal"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_below="@+id/rl1"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@color/shipped_status_bg"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:text="Withdrawal"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="@dimen/_10sdp"
+        android:layout_below="@+id/tvWithdrawal"
+        android:id="@+id/rvMyEarnings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

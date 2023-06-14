@@ -611,7 +611,7 @@ public class ProductDetailFragment extends Fragment {
             tvOriginalPrice.setText(session.getData(Constant.CURRENCY) + ApiConfig.StringFormat("" + OriginalPrice));
 
             showDiscount.setVisibility(View.VISIBLE);
-            showDiscount.setText("-" + ApiConfig.GetDiscount(OriginalPrice, DiscountedPrice));
+            showDiscount.setText( ApiConfig.GetDiscount(OriginalPrice, DiscountedPrice));
         }
 
         txtPrice.setText(session.getData(Constant.CURRENCY) + ApiConfig.StringFormat("" + DiscountedPrice));

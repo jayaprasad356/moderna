@@ -422,4 +422,10 @@
     <string name="btn_continue">Continue</string>
     <string name="password">Password</string>
     <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="my_earnings">My Earnings</string>
+    <string name="order_id">Order Id :</string>
+    <string name="product">Product : </string>
+    <string name="withdrawal">Withdrawal</string>
+    <string name="request_withdrawal">Request withdrawal</string>
+    <string name="enter_amount">Enter Amount</string>
 </resources>

@@ -299,7 +299,7 @@ public class ProductLoadMoreAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             holder.originalPrice.setText(session.getData(Constant.CURRENCY) + ApiConfig.StringFormat("" + OriginalPrice));
 
             holder.showDiscount.setVisibility(View.VISIBLE);
-            holder.showDiscount.setText("-" + ApiConfig.GetDiscount(OriginalPrice, DiscountedPrice));
+            holder.showDiscount.setText(ApiConfig.GetDiscount(OriginalPrice, DiscountedPrice));
         }
 
         holder.productPrice.setText(session.getData(Constant.CURRENCY) + ApiConfig.StringFormat("" + DiscountedPrice));

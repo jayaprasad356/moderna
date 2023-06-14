@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.gm.moderna.activity.MyEarningsActivity;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.squareup.picasso.Picasso;
 
@@ -40,7 +41,7 @@ import com.gm.moderna.helper.Utils;
 
 public class DrawerFragment extends Fragment {
     View root;
-    public TextView tvWallet, tvName, tvMobile, tvMenuHome, tvMenuCart, tvMenuOrders, tvMenuChangePassword, tvMenuManageAddresses, tvMenuReferEarn, tvMenuContactUs, tvMenuAboutUs, tvMenuRateUs, tvMenuShareApp, tvMenuFAQ, tvMenuTermsConditions, tvMenuPrivacyPolicy, tvMenuLogout;
+    public TextView tvWallet, tvName, tvMobile, tvMenuHome,tvMenuMyEarnings, tvMenuCart, tvMenuOrders, tvMenuChangePassword, tvMenuManageAddresses, tvMenuReferEarn, tvMenuContactUs, tvMenuAboutUs, tvMenuRateUs, tvMenuShareApp, tvMenuFAQ, tvMenuTermsConditions, tvMenuPrivacyPolicy, tvMenuLogout;
     @SuppressLint("StaticFieldLeak")
     public static ImageView imgProfile;
     @SuppressLint("StaticFieldLeak")
@@ -67,6 +68,7 @@ public class DrawerFragment extends Fragment {
         tvMenuHome = root.findViewById(R.id.tvMenuHome);
         tvMenuCart = root.findViewById(R.id.tvMenuCart);
         tvMenuNotification = root.findViewById(R.id.tvMenuNotification);
+        tvMenuMyEarnings = root.findViewById(R.id.tvMenuMyEarnings);
         tvMenuOrders = root.findViewById(R.id.tvMenuOrders);
         tvMenuWalletHistory = root.findViewById(R.id.tvMenuWalletHistory);
         tvMenuTransactionHistory = root.findViewById(R.id.tvMenuTransactionHistory);
@@ -83,6 +85,15 @@ public class DrawerFragment extends Fragment {
         tvMenuLogout = root.findViewById(R.id.tvMenuLogout);
         lytMenuGroup = root.findViewById(R.id.lytMenuGroup);
         lytProfile = root.findViewById(R.id.lytProfile);
+
+        tvMenuMyEarnings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getActivity(), MyEarningsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         if (session.getBoolean(Constant.IS_USER_LOGIN)) {
             tvName.setText(session.getData(Constant.NAME));
