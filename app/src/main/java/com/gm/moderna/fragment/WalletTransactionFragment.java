@@ -137,173 +137,173 @@ public class WalletTransactionFragment extends Fragment implements PaytmPaymentT
 
         tvBalance.setText(session.getData(Constant.CURRENCY) + Constant.WALLET_BALANCE);
 
-        btnRechargeWallet.setOnClickListener(v -> {
-
-            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(Objects.requireNonNull(activity));
-            LayoutInflater inflater1 = (LayoutInflater) Objects.requireNonNull(getActivity()).getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-            final View dialogView = inflater1.inflate(R.layout.dialog_wallet_recharge, null);
-            alertDialog.setView(dialogView);
-            alertDialog.setCancelable(true);
-            final AlertDialog dialog = alertDialog.create();
-            Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
-
-            TextView tvDialogSend, tvDialogCancel, edtAmount, edtMsg;
-            LinearLayout lytPayOption;
-            RadioGroup lytPayment;
-            RadioButton rbPayU, rbPayPal, rbRazorPay, rbPayStack, rbFlutterWave, rbMidTrans, rbStripe, rbPayTm, rbSslCommerz;
-
-            edtAmount = dialogView.findViewById(R.id.edtAmount);
-            edtMsg = dialogView.findViewById(R.id.edtMsg);
-            tvDialogCancel = dialogView.findViewById(R.id.tvDialogCancel);
-            tvDialogSend = dialogView.findViewById(R.id.tvDialogRecharge);
-            lytPayOption = dialogView.findViewById(R.id.lytPayOption);
-
-            rbPayStack = dialogView.findViewById(R.id.rbPayStack);
-            rbFlutterWave = dialogView.findViewById(R.id.rbFlutterWave);
-            rbPayPal = dialogView.findViewById(R.id.rbPayPal);
-            rbRazorPay = dialogView.findViewById(R.id.rbRazorPay);
-            rbMidTrans = dialogView.findViewById(R.id.rbMidTrans);
-            rbStripe = dialogView.findViewById(R.id.rbStripe);
-            rbPayTm = dialogView.findViewById(R.id.rbPayTm);
-            rbPayU = dialogView.findViewById(R.id.rbPayU);
-            rbSslCommerz = dialogView.findViewById(R.id.rbSslCommerz);
-            lytPayment = dialogView.findViewById(R.id.lytPayment);
-
-            lytPayment.setOnCheckedChangeListener((group, checkedId) -> {
-                RadioButton rb = (RadioButton) dialogView.findViewById(checkedId);
-                paymentMethod = rb.getTag().toString();
-            });
-
-            Map<String, String> params = new HashMap<>();
-            params.put(Constant.SETTINGS, Constant.GetVal);
-            params.put(Constant.GET_PAYMENT_METHOD, Constant.GetVal);
-            //  System.out.println("=====params " + params.toString());
-            ApiConfig.RequestToVolley((result, response) -> {
-
-                if (result) {
-                    try {
-                        JSONObject jsonObject = new JSONObject(response);
-                        if (!jsonObject.getBoolean(Constant.ERROR)) {
-                            if (jsonObject.has("payment_methods")) {
-                                JSONObject object = jsonObject.getJSONObject(Constant.PAYMENT_METHODS);
-                                if (object.has(Constant.payu_method)) {
-                                    Constant.PAYUMONEY = object.getString(Constant.payu_method);
-                                    Constant.MERCHANT_KEY = object.getString(Constant.PAY_M_KEY);
-                                    Constant.MERCHANT_ID = object.getString(Constant.PAYU_M_ID);
-                                    Constant.MERCHANT_SALT = object.getString(Constant.PAYU_SALT);
-                                    ApiConfig.SetAppEnvironment(activity);
-                                }
-                                if (object.has(Constant.razor_pay_method)) {
-                                    Constant.RAZORPAY = object.getString(Constant.razor_pay_method);
-                                    Constant.RAZOR_PAY_KEY_VALUE = object.getString(Constant.RAZOR_PAY_KEY);
-                                }
-                                if (object.has(Constant.paypal_method)) {
-                                    Constant.PAYPAL = object.getString(Constant.paypal_method);
-                                }
-                                if (object.has(Constant.paystack_method)) {
-                                    Constant.PAYSTACK = object.getString(Constant.paystack_method);
-                                    Constant.PAYSTACK_KEY = object.getString(Constant.paystack_public_key);
-                                }
-                                if (object.has(Constant.flutterwave_payment_method)) {
-                                    Constant.FLUTTERWAVE = object.getString(Constant.flutterwave_payment_method);
-                                    Constant.FLUTTERWAVE_ENCRYPTION_KEY_VAL = object.getString(Constant.flutterwave_encryption_key);
-                                    Constant.FLUTTERWAVE_PUBLIC_KEY_VAL = object.getString(Constant.flutterwave_public_key);
-                                    Constant.FLUTTERWAVE_SECRET_KEY_VAL = object.getString(Constant.flutterwave_secret_key);
-                                    Constant.FLUTTERWAVE_SECRET_KEY_VAL = object.getString(Constant.flutterwave_secret_key);
-                                    Constant.FLUTTERWAVE_CURRENCY_CODE_VAL = object.getString(Constant.flutterwave_currency_code);
-                                }
-                                if (object.has(Constant.midtrans_payment_method)) {
-                                    Constant.MIDTRANS = object.getString(Constant.midtrans_payment_method);
-                                }
-                                if (object.has(Constant.stripe_payment_method)) {
-                                    Constant.STRIPE = object.getString(Constant.stripe_payment_method);
-                                    isAddressAvailable();
-                                }
-                                if (object.has(Constant.paytm_payment_method)) {
-                                    Constant.PAYTM = object.getString(Constant.paytm_payment_method);
-                                    Constant.PAYTM_MERCHANT_ID = object.getString(Constant.paytm_merchant_id);
-                                    Constant.PAYTM_MERCHANT_KEY = object.getString(Constant.paytm_merchant_key);
-                                    Constant.PAYTM_MODE = object.getString(Constant.paytm_mode);
-                                }
-
-                                if (object.has(Constant.ssl_commerce_payment_method)) {
-                                    Constant.SSLECOMMERZ = object.getString(Constant.ssl_commerce_payment_method);
-                                    Constant.SSLECOMMERZ_MODE = object.getString(Constant.ssl_commerece_mode);
-                                    Constant.SSLECOMMERZ_STORE_ID = object.getString(Constant.ssl_commerece_store_id);
-                                    Constant.SSLECOMMERZ_SECRET_KEY = object.getString(Constant.ssl_commerece_secret_key);
-                                }
-
-                                if (Constant.FLUTTERWAVE.equals("0") && Constant.PAYPAL.equals("0") && Constant.PAYUMONEY.equals("0") && Constant.COD.equals("0") && Constant.RAZORPAY.equals("0") && Constant.PAYSTACK.equals("0") && Constant.MIDTRANS.equals("0") && Constant.STRIPE.equals("0") && Constant.PAYTM.equals("0") && Constant.SSLECOMMERZ.equals("0")) {
-                                    lytPayOption.setVisibility(View.GONE);
-                                } else {
-                                    lytPayOption.setVisibility(View.VISIBLE);
-
-                                    if (Constant.PAYUMONEY.equals("1")) {
-                                        rbPayU.setVisibility(View.VISIBLE);
-                                    }
-                                    if (Constant.RAZORPAY.equals("1")) {
-                                        rbRazorPay.setVisibility(View.VISIBLE);
-                                    }
-                                    if (Constant.PAYSTACK.equals("1")) {
-                                        rbPayStack.setVisibility(View.VISIBLE);
-                                    }
-                                    if (Constant.FLUTTERWAVE.equals("1")) {
-                                        rbFlutterWave.setVisibility(View.VISIBLE);
-                                    }
-                                    if (Constant.PAYPAL.equals("1")) {
-                                        rbPayPal.setVisibility(View.VISIBLE);
-                                    }
-                                    if (Constant.MIDTRANS.equals("1")) {
-                                        rbMidTrans.setVisibility(View.VISIBLE);
-                                    }
-                                    if (Constant.STRIPE.equals("1")) {
-                                        rbStripe.setVisibility(View.VISIBLE);
-                                    }
-                                    if (Constant.PAYTM.equals("1")) {
-                                        rbPayTm.setVisibility(View.VISIBLE);
-                                    }
-                                    if (Constant.SSLECOMMERZ.equals("1")) {
-                                        rbSslCommerz.setVisibility(View.VISIBLE);
-                                    }
-                                }
-                            } else {
-                                Toast.makeText(activity, getString(R.string.alert_payment_methods_blank), Toast.LENGTH_SHORT).show();
-                            }
-                        }
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-
-                    }
-                }
-            }, activity, Constant.SETTING_URL, params, false);
-
-            tvDialogSend.setOnClickListener(v12 -> {
-                if (edtAmount.getText().toString().equals("")) {
-                    edtAmount.requestFocus();
-                    edtAmount.setError(getString(R.string.alert_enter_amount));
-                } else if (Double.parseDouble(edtAmount.getText().toString()) > Double.parseDouble(session.getData(Constant.user_wallet_refill_limit))) {
-                    Toast.makeText(activity, getString(R.string.max_wallet_amt_error), Toast.LENGTH_SHORT).show();
-                } else if (Double.parseDouble(edtAmount.getText().toString().trim()) <= 0) {
-                    edtAmount.requestFocus();
-                    edtAmount.setError(getString(R.string.alert_recharge));
-                } else {
-                    if (paymentMethod != null) {
-                        amount = edtAmount.getText().toString().trim();
-                        msg = edtMsg.getText().toString().trim();
-                        RechargeWallet();
-                        dialog.dismiss();
-                    } else {
-                        Toast.makeText(activity, getString(R.string.select_payment_method), Toast.LENGTH_SHORT).show();
-                    }
-                }
-            });
-
-            tvDialogCancel.setOnClickListener(v1 -> dialog.dismiss());
-
-            dialog.show();
-        });
+//        btnRechargeWallet.setOnClickListener(v -> {
+//
+//            final AlertDialog.Builder alertDialog = new AlertDialog.Builder(Objects.requireNonNull(activity));
+//            LayoutInflater inflater1 = (LayoutInflater) Objects.requireNonNull(getActivity()).getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//
+//            final View dialogView = inflater1.inflate(R.layout.dialog_wallet_recharge, null);
+//            alertDialog.setView(dialogView);
+//            alertDialog.setCancelable(true);
+//            final AlertDialog dialog = alertDialog.create();
+//            Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
+//
+//            TextView tvDialogSend, tvDialogCancel, edtAmount, edtMsg;
+//            LinearLayout lytPayOption;
+//            RadioGroup lytPayment;
+//            RadioButton rbPayU, rbPayPal, rbRazorPay, rbPayStack, rbFlutterWave, rbMidTrans, rbStripe, rbPayTm, rbSslCommerz;
+//
+//            edtAmount = dialogView.findViewById(R.id.edtAmount);
+//            edtMsg = dialogView.findViewById(R.id.edtMsg);
+//            tvDialogCancel = dialogView.findViewById(R.id.tvDialogCancel);
+//            tvDialogSend = dialogView.findViewById(R.id.tvDialogRecharge);
+//            lytPayOption = dialogView.findViewById(R.id.lytPayOption);
+//
+//            rbPayStack = dialogView.findViewById(R.id.rbPayStack);
+//            rbFlutterWave = dialogView.findViewById(R.id.rbFlutterWave);
+//            rbPayPal = dialogView.findViewById(R.id.rbPayPal);
+//            rbRazorPay = dialogView.findViewById(R.id.rbRazorPay);
+//            rbMidTrans = dialogView.findViewById(R.id.rbMidTrans);
+//            rbStripe = dialogView.findViewById(R.id.rbStripe);
+//            rbPayTm = dialogView.findViewById(R.id.rbPayTm);
+//            rbPayU = dialogView.findViewById(R.id.rbPayU);
+//            rbSslCommerz = dialogView.findViewById(R.id.rbSslCommerz);
+//            lytPayment = dialogView.findViewById(R.id.lytPayment);
+//
+//            lytPayment.setOnCheckedChangeListener((group, checkedId) -> {
+//                RadioButton rb = (RadioButton) dialogView.findViewById(checkedId);
+//                paymentMethod = rb.getTag().toString();
+//            });
+//
+//            Map<String, String> params = new HashMap<>();
+//            params.put(Constant.SETTINGS, Constant.GetVal);
+//            params.put(Constant.GET_PAYMENT_METHOD, Constant.GetVal);
+//            //  System.out.println("=====params " + params.toString());
+//            ApiConfig.RequestToVolley((result, response) -> {
+//
+//                if (result) {
+//                    try {
+//                        JSONObject jsonObject = new JSONObject(response);
+//                        if (!jsonObject.getBoolean(Constant.ERROR)) {
+//                            if (jsonObject.has("payment_methods")) {
+//                                JSONObject object = jsonObject.getJSONObject(Constant.PAYMENT_METHODS);
+//                                if (object.has(Constant.payu_method)) {
+//                                    Constant.PAYUMONEY = object.getString(Constant.payu_method);
+//                                    Constant.MERCHANT_KEY = object.getString(Constant.PAY_M_KEY);
+//                                    Constant.MERCHANT_ID = object.getString(Constant.PAYU_M_ID);
+//                                    Constant.MERCHANT_SALT = object.getString(Constant.PAYU_SALT);
+//                                    ApiConfig.SetAppEnvironment(activity);
+//                                }
+//                                if (object.has(Constant.razor_pay_method)) {
+//                                    Constant.RAZORPAY = object.getString(Constant.razor_pay_method);
+//                                    Constant.RAZOR_PAY_KEY_VALUE = object.getString(Constant.RAZOR_PAY_KEY);
+//                                }
+//                                if (object.has(Constant.paypal_method)) {
+//                                    Constant.PAYPAL = object.getString(Constant.paypal_method);
+//                                }
+//                                if (object.has(Constant.paystack_method)) {
+//                                    Constant.PAYSTACK = object.getString(Constant.paystack_method);
+//                                    Constant.PAYSTACK_KEY = object.getString(Constant.paystack_public_key);
+//                                }
+//                                if (object.has(Constant.flutterwave_payment_method)) {
+//                                    Constant.FLUTTERWAVE = object.getString(Constant.flutterwave_payment_method);
+//                                    Constant.FLUTTERWAVE_ENCRYPTION_KEY_VAL = object.getString(Constant.flutterwave_encryption_key);
+//                                    Constant.FLUTTERWAVE_PUBLIC_KEY_VAL = object.getString(Constant.flutterwave_public_key);
+//                                    Constant.FLUTTERWAVE_SECRET_KEY_VAL = object.getString(Constant.flutterwave_secret_key);
+//                                    Constant.FLUTTERWAVE_SECRET_KEY_VAL = object.getString(Constant.flutterwave_secret_key);
+//                                    Constant.FLUTTERWAVE_CURRENCY_CODE_VAL = object.getString(Constant.flutterwave_currency_code);
+//                                }
+//                                if (object.has(Constant.midtrans_payment_method)) {
+//                                    Constant.MIDTRANS = object.getString(Constant.midtrans_payment_method);
+//                                }
+//                                if (object.has(Constant.stripe_payment_method)) {
+//                                    Constant.STRIPE = object.getString(Constant.stripe_payment_method);
+//                                    isAddressAvailable();
+//                                }
+//                                if (object.has(Constant.paytm_payment_method)) {
+//                                    Constant.PAYTM = object.getString(Constant.paytm_payment_method);
+//                                    Constant.PAYTM_MERCHANT_ID = object.getString(Constant.paytm_merchant_id);
+//                                    Constant.PAYTM_MERCHANT_KEY = object.getString(Constant.paytm_merchant_key);
+//                                    Constant.PAYTM_MODE = object.getString(Constant.paytm_mode);
+//                                }
+//
+//                                if (object.has(Constant.ssl_commerce_payment_method)) {
+//                                    Constant.SSLECOMMERZ = object.getString(Constant.ssl_commerce_payment_method);
+//                                    Constant.SSLECOMMERZ_MODE = object.getString(Constant.ssl_commerece_mode);
+//                                    Constant.SSLECOMMERZ_STORE_ID = object.getString(Constant.ssl_commerece_store_id);
+//                                    Constant.SSLECOMMERZ_SECRET_KEY = object.getString(Constant.ssl_commerece_secret_key);
+//                                }
+//
+//                                if (Constant.FLUTTERWAVE.equals("0") && Constant.PAYPAL.equals("0") && Constant.PAYUMONEY.equals("0") && Constant.COD.equals("0") && Constant.RAZORPAY.equals("0") && Constant.PAYSTACK.equals("0") && Constant.MIDTRANS.equals("0") && Constant.STRIPE.equals("0") && Constant.PAYTM.equals("0") && Constant.SSLECOMMERZ.equals("0")) {
+//                                    lytPayOption.setVisibility(View.GONE);
+//                                } else {
+//                                    lytPayOption.setVisibility(View.VISIBLE);
+//
+//                                    if (Constant.PAYUMONEY.equals("1")) {
+//                                        rbPayU.setVisibility(View.VISIBLE);
+//                                    }
+//                                    if (Constant.RAZORPAY.equals("1")) {
+//                                        rbRazorPay.setVisibility(View.VISIBLE);
+//                                    }
+//                                    if (Constant.PAYSTACK.equals("1")) {
+//                                        rbPayStack.setVisibility(View.VISIBLE);
+//                                    }
+//                                    if (Constant.FLUTTERWAVE.equals("1")) {
+//                                        rbFlutterWave.setVisibility(View.VISIBLE);
+//                                    }
+//                                    if (Constant.PAYPAL.equals("1")) {
+//                                        rbPayPal.setVisibility(View.VISIBLE);
+//                                    }
+//                                    if (Constant.MIDTRANS.equals("1")) {
+//                                        rbMidTrans.setVisibility(View.VISIBLE);
+//                                    }
+//                                    if (Constant.STRIPE.equals("1")) {
+//                                        rbStripe.setVisibility(View.VISIBLE);
+//                                    }
+//                                    if (Constant.PAYTM.equals("1")) {
+//                                        rbPayTm.setVisibility(View.VISIBLE);
+//                                    }
+//                                    if (Constant.SSLECOMMERZ.equals("1")) {
+//                                        rbSslCommerz.setVisibility(View.VISIBLE);
+//                                    }
+//                                }
+//                            } else {
+//                                Toast.makeText(activity, getString(R.string.alert_payment_methods_blank), Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//
+//                    }
+//                }
+//            }, activity, Constant.SETTING_URL, params, false);
+//
+//            tvDialogSend.setOnClickListener(v12 -> {
+//                if (edtAmount.getText().toString().equals("")) {
+//                    edtAmount.requestFocus();
+//                    edtAmount.setError(getString(R.string.alert_enter_amount));
+//                } else if (Double.parseDouble(edtAmount.getText().toString()) > Double.parseDouble(session.getData(Constant.user_wallet_refill_limit))) {
+//                    Toast.makeText(activity, getString(R.string.max_wallet_amt_error), Toast.LENGTH_SHORT).show();
+//                } else if (Double.parseDouble(edtAmount.getText().toString().trim()) <= 0) {
+//                    edtAmount.requestFocus();
+//                    edtAmount.setError(getString(R.string.alert_recharge));
+//                } else {
+//                    if (paymentMethod != null) {
+//                        amount = edtAmount.getText().toString().trim();
+//                        msg = edtMsg.getText().toString().trim();
+//                        RechargeWallet();
+//                        dialog.dismiss();
+//                    } else {
+//                        Toast.makeText(activity, getString(R.string.select_payment_method), Toast.LENGTH_SHORT).show();
+//                    }
+//                }
+//            });
+//
+//            tvDialogCancel.setOnClickListener(v1 -> dialog.dismiss());
+//
+//            dialog.show();
+//        });
 
         return root;
     }

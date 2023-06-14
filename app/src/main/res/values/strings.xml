@@ -428,4 +428,5 @@
     <string name="withdrawal">Withdrawal</string>
     <string name="request_withdrawal">Request withdrawal</string>
     <string name="enter_amount">Enter Amount</string>
+    <string name="request_wallet">Request Wallet</string>
 </resources>
