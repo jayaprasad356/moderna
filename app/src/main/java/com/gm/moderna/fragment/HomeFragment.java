@@ -3,7 +3,9 @@ package com.gm.moderna.fragment;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Rect;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -27,6 +29,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
@@ -75,6 +78,7 @@ public class HomeFragment extends Fragment {
     int currentPage = 0;
     RelativeLayout lytCategory, lytSeller;
     LinearLayout lytSearchView;
+    FloatingActionButton floating_action_button;
     Menu menu;
     TextView tvMore, tvMoreSeller;
     boolean searchVisible = false;
@@ -95,6 +99,20 @@ public class HomeFragment extends Fragment {
         timerDelay = 3000;
         timerWaiting = 3000;
         setHasOptionsMenu(true);
+
+        floating_action_button = root.findViewById(R.id.floating_action_button);
+        floating_action_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // open with chat whats app
+
+                String phoneNumber = "9442071531";
+
+                Uri uri = Uri.parse("https://api.whatsapp.com/send?phone=" + phoneNumber);
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
 
         swipeLayout = root.findViewById(R.id.swipeLayout);
         categoryRecyclerView = root.findViewById(R.id.categoryRecycleView);

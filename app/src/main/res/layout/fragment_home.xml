@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bg_color"
     android:clickable="true"
     android:focusable="true"
@@ -242,6 +243,45 @@
         </LinearLayout>
 
     </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+            android:id="@+id/floating_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            app:srcCompat="@drawable/icwhatsapp"
+            app:backgroundTint="@color/light_green"
+            android:gravity="center"
+            app:tint="@color/white"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:fontFamily="@font/open_sans"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_4sdp"
+
+            />
+
+
+
+    </LinearLayout>
+
 
 
 
