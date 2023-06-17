@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 public class Constant {
     public static final String MainBaseUrl = "https://moderna.graymatterworks.com/"; //Admin panel url
+    //public static final String MainBaseUrl = "http://192.168.43.38/moderna/"; //Admin panel url
     public static final String WebSiteUrl = ""; //Admin panel url
 
     //set your jwt secret key here...key must same in PHP and Android
@@ -69,6 +70,7 @@ public class Constant {
     public static final String PROMO_CODE_CHECK_URL = BaseUrl + "validate-promo-code.php";
     public static final String VERIFY_PAYMENT_REQUEST = BaseUrl + "payment-request.php";
     public static final String REGISTER_DEVICE_URL = BaseUrl + "store-fcm-id.php";
+    public static final String WITHDRAWAL_REQUESTS_URL = BaseUrl + "withdrawal-requests.php";
 
 
     //**************parameters***************
@@ -95,6 +97,7 @@ public class Constant {
     public static final String GET_PRIVACY = "get_privacy";
     public static final String GET_TERMS = "get_terms";
     public static final String GET_ADDRESSES = "get_addresses";
+    public static final String USER_REQUEST = "user_request";
     public static final String DELETE_ADDRESS = "delete_address";
     public static final String ADD_ADDRESS = "add_address";
     public static final String UPDATE_ADDRESS = "update_address";

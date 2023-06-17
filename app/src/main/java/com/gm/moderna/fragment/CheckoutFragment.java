@@ -111,9 +111,9 @@ public class CheckoutFragment extends Fragment {
                 if (!OrderPlacable) {
 
                     dCharge = tvDeliveryCharge.getText().toString().equals(getString(R.string.free)) ? 0.0 : Constant.SETTING_DELIVERY_CHARGE;
-                    if (subtotal > Constant.SETTING_MINIMUM_AMOUNT_FOR_FREE_DELIVERY) {
-                        Constant.SETTING_DELIVERY_CHARGE = 0.0;
-                    }
+//                    if (subtotal > Constant.SETTING_MINIMUM_AMOUNT_FOR_FREE_DELIVERY) {
+//                        Constant.SETTING_DELIVERY_CHARGE = 0.0;
+//                    }
 
                     Intent intent = new Intent(activity, PaymentActivity.class);
                     intent.putExtra("subtotal", Double.parseDouble("" + (subtotal + dCharge)));
@@ -269,6 +269,11 @@ public class CheckoutFragment extends Fragment {
                             e.printStackTrace();
                         }
                     }
+                    double sum = 0;
+                    for (int i = 0; i < qtyList.size(); i++) {
+                        sum += Double.parseDouble(qtyList.get(i));
+                    }
+                    Constant.SETTING_DELIVERY_CHARGE = Double.parseDouble(sum+"") * 60;
 
                     checkoutItemListAdapter = new CheckoutItemListAdapter(activity, carts);
                     recyclerView.setAdapter(checkoutItemListAdapter);
@@ -297,6 +302,7 @@ public class CheckoutFragment extends Fragment {
     @SuppressLint({"SetTextI18n", "DefaultLocale"})
     public void SetDataTotal() {
         try {
+
             Log.d("CHECKOUT",String.valueOf(OriginalAmount) + "  "+String.valueOf(DiscountedAmount));
             if ((OriginalAmount - DiscountedAmount) != 0) {
                 lytSaveAmount.setVisibility(View.VISIBLE);
@@ -311,13 +317,8 @@ public class CheckoutFragment extends Fragment {
                     lytSaveAmount.setVisibility(View.GONE);
                 }
             }
-            if (Constant.FLOAT_TOTAL_AMOUNT <= Constant.SETTING_MINIMUM_AMOUNT_FOR_FREE_DELIVERY) {
-                tvDeliveryCharge.setText(session.getData(Constant.CURRENCY) + Constant.SETTING_DELIVERY_CHARGE);
-                deliveryCharge = "" + Constant.SETTING_DELIVERY_CHARGE;
-            } else {
-                tvDeliveryCharge.setText(getResources().getString(R.string.free));
-                deliveryCharge = "0";
-            }
+            deliveryCharge = Constant.SETTING_DELIVERY_CHARGE + "";
+            tvDeliveryCharge.setText(session.getData(Constant.CURRENCY) +""+Constant.SETTING_DELIVERY_CHARGE);
             dCharge = tvDeliveryCharge.getText().toString().equals(getString(R.string.free)) ? 0.0 : Constant.SETTING_DELIVERY_CHARGE;
             if (!pCode.isEmpty()) {
                 subtotal = subtotal - pCodeDiscount;

@@ -136,6 +136,34 @@ public class WalletTransactionFragment extends Fragment implements PaytmPaymentT
         ApiConfig.getWalletBalance(activity, session);
 
         tvBalance.setText(session.getData(Constant.CURRENCY) + Constant.WALLET_BALANCE);
+        btnRechargeWallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Map<String, String> params = new HashMap<>();
+                params.put(Constant.USER_REQUEST, Constant.GetVal);
+                params.put(Constant.USER_ID, session.getData(Constant.ID));
+                params.put(Constant.AMOUNT, Constant.WALLET_BALANCE + "");
+                params.put(Constant.TYPE, "debit");
+                params.put(Constant.MESSAGE, "Withdrawal Request");
+                ApiConfig.RequestToVolley((result, response) -> {
+                    Log.d("withdrawal_request",response);
+                    if (result) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            if (!jsonObject.getBoolean(Constant.ERROR)) {
+                                Toast.makeText(activity, ""+jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
+                            }else {
+                                Toast.makeText(activity, ""+jsonObject.getString(Constant.MESSAGE), Toast.LENGTH_SHORT).show();
+
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+
+                        }
+                    }
+                }, activity, Constant.WITHDRAWAL_REQUESTS_URL, params, false);
+            }
+        });
 
 //        btnRechargeWallet.setOnClickListener(v -> {
 //

@@ -60,7 +60,7 @@
                         android:layout_marginTop="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:background="@drawable/card_shadow"
-                        android:text="@string/request_wallet"
+                        android:text="Request Withdrawal"
                         android:textAllCaps="false"
                         android:textColor="@color/colorPrimary"
                         android:textSize="@dimen/_12ssp"
