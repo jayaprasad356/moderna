@@ -49,7 +49,7 @@ public class ReferEarnFragment extends Fragment {
         } else {
             preText = session.getData(Constant.refer_earn_bonus) + "% ";
         }
-        tvReferCoin.setText(getString(R.string.refer_text_1) + preText + getString(R.string.refer_text_2) + session.getData(Constant.CURRENCY) + session.getData(Constant.min_refer_earn_order_amount) + getString(R.string.refer_text_3) + session.getData(Constant.CURRENCY) + session.getData(Constant.max_refer_earn_amount) + ".");
+        tvReferCoin.setText(getString(R.string.refer_text_1) + " 10% "  + getString(R.string.refer_text_2) );
         tvCode = root.findViewById(R.id.tvCode);
         tvCopy = root.findViewById(R.id.tvCopy);
         tvInvite = root.findViewById(R.id.tvInvite);

@@ -132,7 +132,7 @@
     <string name="filter_by">Filter By</string>
     <string name="change_layout">Change Layout</string>
     <string name="payment_method">Payment Method</string>
-    <string name="cod_pay">Cash On Delivery</string>
+    <string name="cod_pay">Pay after placing order</string>
     <string name="pay_u_pay">PayU Money</string>
     <string name="paypal_pay">PayPal</string>
     <string name="paystack">Paystack</string>
@@ -327,7 +327,7 @@
     <string name="stripe">Stripe</string>
     <string name="paytm">PayTm</string>
     <string name="refer_text_1">Refer a friend and earn up to </string>
-    <string name="refer_text_2">when your friend\'s first order is successfully delivered. Minimum Order amount should be </string>
+    <string name="refer_text_2">when your friend\'s order is successfully delivered and you will get 10 rupees for your friends register in app.</string>
     <string name="refer_text_3">. Which allows you to earn up to </string>
     <string name="sold_out">Out of stock</string>
     <string name="reorder">Re-Order</string>
@@ -408,7 +408,7 @@
     <string name="select_city_first">Please select city first!</string>
     <string name="invite_step1">Invite to your friend to signup</string>
     <string name="invite_step2">Your friend download app</string>
-    <string name="invite_step3">Place first order from friend account</string>
+    <string name="invite_step3">Place order from friend account</string>
     <string name="invite_step4">After first order delivered, You get rewarded</string>
     <string name="user_block_msg">It seems your account is not active please contact admin for more info!</string>
     <string name="refer_and_earn">Refer &amp; Earn</string>
